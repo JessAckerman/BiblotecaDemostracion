@@ -6,22 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteca Digital</title>
 
-    <!-- Archivo CSS -->
+    <!-- Hoja de estilos -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
 
-    <!-- Encabezado -->
+    <!-- ========================= -->
+    <!-- ENCABEZADO -->
+    <!-- ========================= -->
     <header>
-        <h1>Biblioteca Digital</h1>
+        <h1>📚 Biblioteca Digital</h1>
         <p>Gestiona el catálogo de libros de manera sencilla.</p>
     </header>
 
     <main>
 
-        <!-- Formulario para registrar libros -->
+        <!-- ========================= -->
+        <!-- REGISTRO DE LIBROS -->
+        <!-- ========================= -->
         <section id="registro">
+
             <h2>Registrar nuevo libro</h2>
 
             <form id="formLibro">
@@ -33,7 +38,8 @@
                         id="titulo"
                         name="titulo"
                         placeholder="Ingrese el título del libro"
-                        required>
+                        required
+                        aria-required="true">
                 </div>
 
                 <div>
@@ -43,7 +49,8 @@
                         id="autor"
                         name="autor"
                         placeholder="Ingrese el autor"
-                        required>
+                        required
+                        aria-required="true">
                 </div>
 
                 <div>
@@ -53,7 +60,8 @@
                         id="categoria"
                         name="categoria"
                         placeholder="Ingrese la categoría"
-                        required>
+                        required
+                        aria-required="true">
                 </div>
 
                 <button type="submit">
@@ -61,22 +69,35 @@
                 </button>
 
             </form>
+
         </section>
 
-        <!-- Barra de búsqueda -->
-        <section id="buscador">
+        <hr>
+
+        <!-- ========================= -->
+        <!-- BÚSQUEDA -->
+        <!-- ========================= -->
+        <section id="busquedaSection">
+
             <h2>Buscar libros</h2>
 
             <input
-                type="text"
+                type="search"
                 id="busqueda"
                 name="busqueda"
-                placeholder="Buscar por título o autor"
-                aria-label="Buscar libro por título o autor">
+                placeholder="Buscar por título o autor..."
+                aria-label="Buscar libro">
+
         </section>
 
-        <!-- Filtro de disponibilidad -->
+        <hr>
+
+        <!-- ========================= -->
+        <!-- FILTRO -->
+        <!-- ========================= -->
         <section id="filtros">
+
+            <h2>Filtrar libros</h2>
 
             <label for="filtroDisponibilidad">
                 Disponibilidad
@@ -94,20 +115,74 @@
 
         </section>
 
-        <!-- Catálogo de libros -->
+        <hr>
+
+        <!-- ========================= -->
+        <!-- ESTADÍSTICAS -->
+        <!-- ========================= -->
+        <section id="estadisticas">
+
+            <h2>Estadísticas</h2>
+
+            <p>
+                Total de libros:
+                <strong id="totalLibros">0</strong>
+            </p>
+
+            <p>
+                Disponibles:
+                <strong id="librosDisponibles">0</strong>
+            </p>
+
+            <p>
+                Prestados:
+                <strong id="librosPrestados">0</strong>
+            </p>
+
+        </section>
+
+        <hr>
+
+        <!-- ========================= -->
+        <!-- CATÁLOGO -->
+        <!-- ========================= -->
         <section id="catalogo">
 
-            <h2>Catálogo de Libros</h2>
+            <h2>Catálogo de libros</h2>
+
+            <p id="mensajeVacio">
+                No hay libros registrados.
+            </p>
 
             <div id="listaLibros">
-                <!-- Los libros se mostrarán aquí mediante JavaScript -->
+
+                <!--
+                    Jess agregará aquí las tarjetas de libros
+                    usando JavaScript.
+                -->
+
             </div>
 
         </section>
 
     </main>
 
-    <!-- Archivo JavaScript -->
+    <!-- ========================= -->
+    <!-- PIE DE PÁGINA -->
+    <!-- ========================= -->
+    <footer>
+
+        <p>
+            Biblioteca Digital &copy; 2026
+        </p>
+
+        <small>
+            Proyecto desarrollado por Joseph, Vane y Jess.
+        </small>
+
+    </footer>
+
+    <!-- JavaScript -->
     <script src="js/script.js"></script>
 
 </body>
