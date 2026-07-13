@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Digital</title>
+
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- ========================= -->
+    <!-- ENCABEZADO -->
+    <!-- ========================= -->
+    <header>
+        <h1>📚 Biblioteca Digital</h1>
+        <p>Gestiona el catálogo de libros de manera sencilla.</p>
+    </header>
+
+    <main>
+
+        <!-- ========================= -->
+        <!-- REGISTRO DE LIBROS -->
+        <!-- ========================= -->
+        <section id="registro">
+
+            <h2>Registrar nuevo libro</h2>
+
+            <form id="formLibro">
+
+                <div>
+                    <label for="titulo">Título</label>
+                    <input
+                        type="text"
+                        id="titulo"
+                        name="titulo"
+                        placeholder="Ingrese el título del libro"
+                        required
+                        aria-required="true">
+                </div>
+
+                <div>
+                    <label for="autor">Autor</label>
+                    <input
+                        type="text"
+                        id="autor"
+                        name="autor"
+                        placeholder="Ingrese el autor"
+                        required
+                        aria-required="true">
+                </div>
+
+                <div>
+                    <label for="categoria">Categoría</label>
+                    <input
+                        type="text"
+                        id="categoria"
+                        name="categoria"
+                        placeholder="Ingrese la categoría"
+                        required
+                        aria-required="true">
+                </div>
+
+                <button type="submit">
+                    Agregar libro
+                </button>
+
+            </form>
+
+        </section>
+
+        <hr>
+
+        <!-- ========================= -->
+        <!-- BÚSQUEDA -->
+        <!-- ========================= -->
+        <section id="busquedaSection">
+
+            <h2>Buscar libros</h2>
+
+            <input
+                type="search"
+                id="busqueda"
+                name="busqueda"
+                placeholder="Buscar por título o autor..."
+                aria-label="Buscar libro">
+
+        </section>
+
+        <hr>
+
+        <!-- ========================= -->
+        <!-- FILTRO -->
+        <!-- ========================= -->
+        <section id="filtros">
+
+            <h2>Filtrar libros</h2>
+
+            <label for="filtroDisponibilidad">
+                Disponibilidad
+            </label>
+
+            <select
+                id="filtroDisponibilidad"
+                name="filtroDisponibilidad">
+
+                <option value="todos">Todos</option>
+                <option value="disponible">Disponibles</option>
+                <option value="prestado">Prestados</option>
+
+            </select>
+
+        </section>
+
+        <hr>
+
+        <!-- ========================= -->
+        <!-- ESTADÍSTICAS -->
+        <!-- ========================= -->
+        <section id="estadisticas">
+
+            <h2>Estadísticas</h2>
+
+            <p>
+                Total de libros:
+                <strong id="totalLibros">0</strong>
+            </p>
+
+            <p>
+                Disponibles:
+                <strong id="librosDisponibles">0</strong>
+            </p>
+
+            <p>
+                Prestados:
+                <strong id="librosPrestados">0</strong>
+            </p>
+
+        </section>
+
+        <hr>
+
+        <!-- ========================= -->
+        <!-- CATÁLOGO -->
+        <!-- ========================= -->
+        <section id="catalogo">
+
+            <h2>Catálogo de libros</h2>
+
+            <p id="mensajeVacio">
+                No hay libros registrados.
+            </p>
+
+            <div id="listaLibros">
+
+                <!--
+                    Jess agregará aquí las tarjetas de libros
+                    usando JavaScript.
+                -->
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ========================= -->
+    <!-- PIE DE PÁGINA -->
+    <!-- ========================= -->
+    <footer>
+
+        <p>
+            Biblioteca Digital &copy; 2026
+        </p>
+
+        <small>
+            Proyecto desarrollado por Joseph, Vane y Jess.
+        </small>
+
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
